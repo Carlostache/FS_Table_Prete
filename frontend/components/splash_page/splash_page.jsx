@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const SplashPage = ({ currentUser, logout }) => {
+const SplashPage = ({ currentUser, logout, openModal }) => {
 
     const sessionLinks = () => (
         <nav className='login-signup'>
-            <Link to='/login'>Login</Link>
+            <button onClick={() => openModal('login')}>Sign in</button>
             &nbsp;or&nbsp;
-            <Link to='/signup'>Sign Up!</Link>
+            <button onClick={() => openModal('signup')}>Sign up</button>
         </nav>
     );
     const currentUserGreeting = () => (
@@ -17,7 +17,7 @@ const SplashPage = ({ currentUser, logout }) => {
         </hgroup>
     );
 
-    return currentUser ? currentUserGreeting() : sessionLinks();
+    return currentUser ? currentUserGreeting(currentUser, logout) : sessionLinks();
 };
 
 export default SplashPage;
