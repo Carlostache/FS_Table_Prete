@@ -6,11 +6,11 @@ class Api::SessionsController < ApplicationController
             params[:user][:password]
             )
 
-        if @user.nil?
-          render json: ['Incorrect login, try again'], status: 401
-        else 
+        if @user
             login!(@user)
             render 'api/users/show'
+        else
+            render json: ['Incorrect login, try again'], status: 401
         end
     end
 
@@ -21,7 +21,7 @@ class Api::SessionsController < ApplicationController
             render json: ["No user logged in"], status: 404
         else
             logout
-            render json: {}
+            render "api/users/show"
         end
     end
 

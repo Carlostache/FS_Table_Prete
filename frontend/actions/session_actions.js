@@ -17,23 +17,29 @@ export const logoutCurrentUser = () => {
    }
 };
 
-export const receiveErrors = errors => ({
+export const receiveErrors = errors => {
+    return {
     type: RECEIVE_SESSION_ERRORS,
     errors
-});
+    }
+};
 
 
-export const signup = user => dispatch => (
+export const signup = user => dispatch => {
+    return (
     APIUtil.signup(user)
-        .then(user => (dispatch(receiveCurrentUser(user)))),
-    errors => (dispatch(receiveErrors(errors.responseJSON)))
-);
+        .then((user) => dispatch(receiveCurrentUser(user)),
+            (err) => (dispatch(receiveErrors(err.responseJSON))) )
+    )
+};
 
-export const login = user => dispatch => (
+export const login = user => dispatch => {
+    return (
     APIUtil.login(user)
-        .then(user => (dispatch(receiveCurrentUser(user)))),
-    errors => (dispatch(receiveErrors(errors.responseJSON)))
-);
+    .then((user) => dispatch(receiveCurrentUser(user)),
+        (err) => (dispatch(receiveErrors(err.responseJSON))) )
+    )
+};
 
 export const logout = () => dispatch => (
     APIUtil.logout()
