@@ -4,6 +4,8 @@ import configureStore from './store/store';
 import Root from './components/root';
 import { RECEIVE_SESSION_ERRORS, receiveErrors } from './actions/session_actions';
 
+import { fetchRestaurant, fetchRestaurants } from './actions/restaurant_actions'
+
 
 
 
@@ -30,6 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
     window.dispatch = store.dispatch
 
     window.receiveErrors = receiveErrors
+
+    window.fetchRestaurant = fetchRestaurant
+
+    window.fetchRestaurants = fetchRestaurants
 
 
     const root = document.getElementById('root');

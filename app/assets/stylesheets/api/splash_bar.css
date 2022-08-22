@@ -1,8 +1,132 @@
 
-.login-form-container{
-
+.splash-bar{
+    padding: 12px 8px 0 32px;
+    height: 3.375rem;
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
 }
 
-.login-form-box{
+.header-link{
+    font-family: BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    color: #2d333f;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.15rem;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.splash-link{
+    padding: 12px 10px 0px 6px;
+    color: #2d333f;
+    text-decoration: none !important;
+}
+
+.signup-button{
+    background-color: #247f9e;
+    border: .0625rem solid #247f9e;
+    color: #fff;
+    font-size: 14px;
+    margin: 0 8px;
+
+    border-radius: .1875rem;
+    cursor: pointer;
+    line-height: 2rem;
+    padding: 0 16px;
+
+    font-family: BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+}
+
+.login-button{
+    background-color: initial;
+    border: .0625rem solid #d8d9db;
+    color: #2d333f;
+    font-size: 14px;
+    margin: 0;
+
+    border-radius: .1875rem;
+    cursor: pointer;
+    line-height: 2rem;
+    padding: 0 16px;
+
+    font-family: BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+}
+
+.open-table-logo{
+    display: inline-block;
+    font-size: 0;
+    height: 3rem;
+    line-height: 1;
+    min-width: 3rem;
+    width: 3rem;
+}
+
+.location-icon {
+    color: #2d333f;
+    border-left: .0625rem solid #0000000f;
+    display: inline-block;
+    font-size: 0;
+    height: 1.5rem;
+    line-height: 0.75;
+    min-width: 1.5rem;
+    width: 1.5rem;
+    padding: 8px 0 0 24px
+}
+
+.search-button{
+    color: #2d333f;
+    font-family: inherit;
+    float: right;
+
+    font-size: 0;
+    height: 1.25rem;
+    line-height: 0.75;
+    min-width: 1.25rem;
+    width: 1.25rem;
+    padding: 8px 24px 0px 12px
+}
+
+.user-button {
+    color: #2d333f;
+    font-family: inherit;
+    float: right;
+
     
+
+    font-size: 0;
+    height: 1.5rem;
+    line-height: 0.75;
+    min-width: 1.5rem;
+    width: 1.5rem;
+    padding: 4px 12px 0px 6px
+}
+
+.calendar-button {
+    color: #2d333f;
+    font-family: inherit;
+    float: right;
+
+    font-size: 0;
+    height: 1.35rem;
+    line-height: 0.75;
+    min-width: 1.35rem;
+    width: 1.35rem;
+    padding: 5px 10px 0px 10px
+}
+
+.notification-button {
+    color: #2d333f;
+    font-family: inherit;
+    float: right;
+
+    font-size: 0;
+    height: 1.5rem;
+    line-height: 0.75;
+    min-width: 1.5rem;
+    width: 1.5rem;
+    padding: 4px 10px 0px 8px;
 }

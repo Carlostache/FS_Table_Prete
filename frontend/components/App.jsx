@@ -3,21 +3,23 @@ import { Route, Redirect, Switch, Link, HashRouter } from "react-router-dom";
 
 import Modal from './modal/modal';
 import SplashPageContainer from "./splash_page/splash_page_container";
-import LoginFormContainer from './session_form/login_form_container';
-import SignUpFormContainer from './session_form/signup_form_container';
+import RestaurantShowContainer from "./restaurant_show/restaurant_show_container";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
 const App = () => (
     <div>
         <Modal />
-        <header>
-            <Link to="/" className="header-link">
-                <h1>Welcome to Table Prête</h1>
+
+        <header className="splash-bar">
+            <Link to="/"   className="header-link">
+                <img className="open-table-logo" src={window.smallOpenTableLogo} />
+                <h1 className='splash-link'>Table Prête</h1>
+                <img className='location-icon' src={window.smallLocation} />
             </Link>
             <SplashPageContainer />
         </header>
         <Switch>
-            
+            <Route path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
         </Switch>
     </div>
 );

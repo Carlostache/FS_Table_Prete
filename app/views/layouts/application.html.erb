@@ -4,10 +4,21 @@
     <title>TablePrete</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script type="text/javascript">
+      window.smallGithubLogo = "<%= image_url('github.png') %>"
+      window.smallLinkedinLogo = "<%= image_url('linkedin.png') %>"
+      window.smallOpenTableLogo = "<%= image_url('opentable.png') %>"
+      window.smallLocation = "<%= image_url('location.png')%>"
+      window.smallSearch = "<%= image_url('search.png')%>"
+      window.smallNotification = "<%= image_url('notification.png')%>"
+      window.smallUser = "<%= image_url('user.png')%>"
+      window.smallCalendar = "<%= image_url('calendar.png')%>"
+    </script>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
+
+
 
   <body>
     <%= yield %>
