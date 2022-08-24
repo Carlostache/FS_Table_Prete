@@ -1,4 +1,12 @@
 
+.restaurant-show-flex-cont {
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+}
+
 .restaurant-show-div {
     background-color: #fff;
     border-radius: 4px;
@@ -12,6 +20,15 @@
     line-height: 1.15;
 }
 
+
+.nav-border {
+    background: #fff;
+    padding-top: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
 .restaurant-nav {
     box-shadow: inset 0 -.0625rem 0 0 #d8d9db;
     position: relative;
@@ -20,12 +37,31 @@
     line-height: 1.15;
 }
 
-.nav-border {
-    background: #fff;
-    padding-top: 16px;
-    position: sticky;
-    top: 0;
-    z-index: 2;
+.restaurant-toolbar {
+    list-style-type: none;
+    margin: 0;
+    overflow-x: auto;
+    padding: 0;
+    scrollbar-width: none;
+    white-space: nowrap;
+}
+
+.quick-nav-li {
+    margin-right: 32px;
+    display: inline-block;
+}
+
+.quick-nav-button {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    appearance: none;
+    background-color: initial;
+    border: none;
+    color: #6f737b;
+    cursor: pointer;
+    margin: 0 0 16px;
+    padding: 0;
 }
 
 .restaurant-name {
@@ -46,4 +82,80 @@
     grid-template-columns: auto auto auto auto;
     grid-template-rows: auto;
     margin-top: 16px;
+}
+
+.restaurant-description-div {
+    margin-top: 32px;
+}
+
+.restaurant-description-span {
+    line-height: 24px;
+    max-height: 72px;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    margin: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.restaurant-photos-header {
+    margin: 0 0 .25rem;
+    color: #2d333f;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+
+    margin-top: 64px;
+}
+
+.restaurant-menu-header {
+    margin: 0 0 .25rem;
+    color: #2d333f;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+
+    margin-top: 64px;
+}
+
+.additional-info-section {
+    margin-top: 32px;
+
+    width: 20rem;
+
+    font-family: BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    color: #2d333f;
+    line-height: 1.15;
+
+    border-radius: 4px;
+    box-shadow: 0 2px 4px #2d333f33;
+    display: inline-flex;
+    justify-content: space-around;
+    /* width: 100%; */
+}
+
+.additional-info-header {
+    margin: 0 0 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+.additional-info-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.additional-info-ul {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }

@@ -12,11 +12,14 @@ class SessionForm extends React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemoLogin = this.handleDemoLogin.bind(this);
+
     }
+
 
     renderErrors() {
         return(
-            <ul>
+            <ul className="render-errors">
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
@@ -36,34 +39,44 @@ class SessionForm extends React.Component {
         return e => this.setState({ [field]: e.currentTarget.value });
     };
 
+    handleDemoLogin(e) {
+        e.preventDefault();
+        const user = {username: "DemoUser", password: "DemoPass"}
+        this.props.processForm(user).then(this.props.closeModal);
+    }
+
     render() {
         return (
             <div className='login-form-container'>
                 <form onSubmit={this.handleSubmit} className='login-form-box'>
-                    Welcome to Table Prête
+                    <h2 className="login-signup-header">Welcome to Table Prête!</h2>
                     <br/>
-                    Please {this.props.formType} or {this.props.otherForm}
                     <div onClick={this.props.closeModal} className="close-x">X</div>
                     {this.renderErrors()}
                     <div className='login-form'>
                         <br/>
-                        <label>Username:
+                        <label>
                             <input type='text'
                                 value={this.state.username}
                                 onChange={this.update('username')}
                                 className='login-input'
+                                placeholder="Username"
                             />
                         </label>
                         <br/>
-                        <label>Password:
+                        <label>
                             <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
                                 className='login-input'
+                                placeholder="Password"
                             />
                         </label>
+                        <input className="session-submit" type='submit' onKeyPress={this.onKeyPress} value={this.props.formType} />
                         <br/>
-                        <input className="session-submit" type='submit' value={this.props.formType} />
+                        {this.props.otherForm}
+                        <br/>
+                        <button className="demo-user-login" onClick={this.handleDemoLogin}>Login as DemoUser</button>
                     </div>
                 </form>
             </div>
