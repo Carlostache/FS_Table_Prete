@@ -7,6 +7,16 @@
     position: relative;
 }
 
+.restaurant-banner-image {
+    height: 460px;
+    object-fit: cover;
+    width: 100%;
+    background-color: #2d333f;
+    display: flex;
+    line-height: 0;
+    position: relative;
+}
+
 .restaurant-show-div {
     background-color: #fff;
     border-radius: 4px;

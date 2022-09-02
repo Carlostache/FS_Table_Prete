@@ -23,27 +23,28 @@ class RestaurantShow extends React.Component{
 
         return (
             <div className="restaurant-show-flex-cont">
+                {/* <img className="restaurant-banner-image" src={window.rest_banner_1} /> */}
                 <div className="restaurant-show-div">
                     <section className="nav-border">
                         <nav className="restaurant-nav">
                             <ol className="restaurant-toolbar">
                                 <li className="quick-nav-li">
-                                    <button  className="quick-nav-button">Overview</button>
+                                    <button href="#restaurant-overview" className="quick-nav-button">Overview</button>
                                 </li>
                                 <li className ="quick-nav-li">
-                                    <button  className="quick-nav-button">Photos</button>
+                                    <button href="#restaurant-photos" className="quick-nav-button">Photos</button>
                                 </li>
                                 <li className="quick-nav-li">
-                                    <button className="quick-nav-button">Menu</button>
+                                    <button href="#restaurant-menu" className="quick-nav-button">Menu</button>
                                 </li>
                                 <li className="quick-nav-li">
-                                    <button className="quick-nav-button">Reviews</button>
+                                    <button href="#restaurant-reviews" className="quick-nav-button">Reviews</button>
                                 </li>
                             </ol>
                         </nav>
                     </section>
                     <section>
-                        <h1  className="restaurant-name">{rest.name}</h1>
+                        <h1 id="restaurant-overview" className="restaurant-name">{rest.name}</h1>
                         <div className="basic-rest-info">
                             <div className='icon-info'>Overall Review Score</div>
                             <div className='icon-info'><FaMoneyBill /> {rest.pricing}</div>
@@ -53,12 +54,12 @@ class RestaurantShow extends React.Component{
                             <span className="restaurant-description-span">{rest.description}</span>
                         </div>
                     </section>
-                    <h2  className="restaurant-photos-header">Photos</h2>
+                    <h2 id="restaurant-photos" className="restaurant-photos-header">Photos</h2>
                         <text>Setup AWS for restaurant and food photos</text>
-                    <h2 className="restaurant-menu-header">Menu</h2>
+                    <h2 id="restaurant-menu" className="restaurant-menu-header">Menu</h2>
                         <text>Render pdf of restaurant menu</text>
                     <div>
-                        <h2 className="restaurant-menu-header">Reviews</h2>
+                        <h2 id="restaurant-reviews" className="restaurant-menu-header">Reviews</h2>
                         <text>Restaurant's Review Component goes here</text>
                     </div>
                 </div>

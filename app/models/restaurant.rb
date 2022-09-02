@@ -2,6 +2,8 @@ class Restaurant < ApplicationRecord
 
     validates :name, uniqueness: true
 
-    has_one_attached :photo
+    has_many_attached :photos
     
+    has_many :reservations
+
 end

@@ -2,6 +2,8 @@ import React from "react";
 
 import { fetchRestaurants } from  "../../actions/restaurant_actions";
 
+import RamenComponent from "./restaurant_index_ramen";
+
 
 class RestaurantIndex extends React.Component {
 
@@ -11,7 +13,9 @@ class RestaurantIndex extends React.Component {
 
     render() {
 
-        const { rests } = this.props
+        let { rests } = this.props
+
+
 
         return (
             <div>
@@ -20,19 +24,7 @@ class RestaurantIndex extends React.Component {
                 </header>
                 <div className="rest-row-div">
                     <ul className="rest-row-ul">
-                        <li className="rest-row-li">
-                            <a href="#/restaurants/1">
-                                <div className="rest-link-div">
-                                    <img className="rest-index-image" src='' />
-                                    <h3 className="rest-name-header">{rests.name}</h3>
-                                    <div className="rest-index-reviews">4.7 Stars</div>
-                                    <div className="rest-index-details">{rests.cuisine} ● {rests.dollars} ● {rests.neighborhood}</div>
-                                    <div className="rest-reservation-div">
-                                        <button className="rest-reservation-button">Book a Table!</button>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
+                        {rests.map(rest => <RamenComponent rest={rest} key={rest.id} /> )}
                     </ul>
                 </div>
             </div>
