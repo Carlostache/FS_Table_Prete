@@ -2,9 +2,10 @@
 .restaurant-show-flex-cont {
     border-radius: 4px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     margin-top: 50px;
     position: relative;
+    margin-left: 17rem;
 }
 
 .restaurant-banner-image {
@@ -143,8 +144,9 @@
 }
 
 .additional-info-section {
-    margin-top: 36px;
-    margin: 16px 0 0;
+    margin: 360px -286px 0;
+
+    border-radius: 10px;
 
     width: 20rem;
 
@@ -152,20 +154,21 @@
     color: #2d333f;
     line-height: 1.15;
 
-    border-radius: 4px;
     box-shadow: 0 2px 4px #2d333f33;
-    display: inline-flex;
-    justify-content: space-around;
+    display: inline-block;
+    justify-content: left;
     /* width: 100%; */
 }
 
 .additional-info-header {
+    padding-left: 8px;
+    padding-top: 8px;
     margin: 0 0 8px;
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.5rem;
-    height: 4rem;
-    display: inline-flex;
+    height: 2rem;
+    display: inline-table;
     justify-content: center;
     font-family: BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
     color: #2d333f;
@@ -175,14 +178,12 @@
     display: inline-flex;
     flex-direction: left;
     float: left;
-    margin-top: 4rem;
 }
 
 .additional-info-ul {
-    padding-top: 6rem;
     flex: 1;
     margin: 0;
-    padding: 0;
+    padding-left: 10px;
     display: center;
     flex-direction: column;
     font-size: 16px;

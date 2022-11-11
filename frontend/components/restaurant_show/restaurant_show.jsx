@@ -4,6 +4,8 @@ import { FaMoneyBill, FaConciergeBell, FaTags, FaPhoneAlt } from 'react-icons/fa
 import { MdRestaurant, MdOutlineLocationOn, MdHomeWork, MdAccessTime } from 'react-icons/md';
 import { GiLargeDress } from 'react-icons/gi';
 
+import ReservationFormContainer from "../reservations/reservation_box_form_container";
+
 import { fetchRestaurant } from "../../actions/restaurant_actions";
 
 
@@ -62,6 +64,11 @@ class RestaurantShow extends React.Component{
                         <h2 id="restaurant-reviews" className="restaurant-menu-header">Reviews</h2>
                         <text>Restaurant's Review Component goes here</text>
                     </div>
+                </div>
+                <div>
+                  <ReservationFormContainer
+                    restaurant_id={this.props.match.params.restaurantId}
+                  />
                 </div>
                 <section className="additional-info-section">
                     <h4 className="additional-info-header">Additional Information</h4>

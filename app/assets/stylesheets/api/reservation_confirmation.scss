@@ -1,0 +1,182 @@
+.confirmation-box {
+    display: block;
+    background-color: #feffff;
+    height: 100vh;
+    padding-top: 60px;
+    padding-left: 150px;
+    min-width: 780px;
+  }
+  
+  .confirmation-container {
+    display: flex;
+    flex-direction: column;
+    //   background-color: orange;
+    background-color: whitesmoke;
+    border-radius: 3px;
+    border: 1px solid lightgrey;
+    width: 65%;
+    padding: 40px;
+    min-width: 720px;
+  }
+  
+  .top-session {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .small-photo {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 20px;
+  }
+  
+  .info-list div {
+    margin-bottom: 11px;
+    height: 25px;
+  }
+  .confirmation-title {
+    font-size: 24px;
+    font-weight: 550;
+  }
+  
+  .res-confirmed {
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+  }
+  
+  .check-icon {
+    padding-right: 5px;
+  }
+  .uncheck-icon {
+    color: var(--red);
+  }
+  .calender-icon {
+    margin-right: 5px;
+    font-weight: 600;
+  }
+  
+  .confirm-info {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  .confirm-info-div {
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+  }
+  .confirmation-info {
+    margin-right: 14px;
+  }
+  
+  .cancel-btn {
+    background-color: transparent;
+    color: rgb(200, 45, 45);
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 2px solid lightgrey;
+    &:hover {
+      cursor: pointer;
+      color: rgb(156, 1, 1);
+    }
+  }
+  .view-btn {
+    // border-left: 2px solid lightgrey;
+    background-color: transparent;
+    color: rgb(200, 45, 45);
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 3px;
+    width: 160px;
+    &:hover {
+      cursor: pointer;
+      color: rgb(156, 1, 1);
+    }
+  }
+  
+  .homepg-btn {
+    background-color: transparent;
+    color: rgb(200, 45, 45);
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    &:hover {
+      cursor: pointer;
+      color: rgb(156, 1, 1);
+    }
+  }
+  
+  .mid-session {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .halo-box {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    height: 40px;
+    padding: 20px;
+    box-shadow: 4px 6px 6px rgba(61, 61, 61, 0.281);
+    border-radius: 7px;
+    margin-top: 20px;
+    &:hover {
+      background-color: rgba(231, 230, 230, 0.973);
+      transition: 0.5s;
+    }
+  }
+  .confirmation-icon {
+    width: 30%;
+    color: rgb(200, 45, 45);
+  }
+  
+  .black-char {
+    font-size: 15px;
+    font-weight: 450;
+    color: black;
+  }
+  .grey-res {
+    font-size: 14px;
+    font-weight: 400;
+    color: lightslategrey;
+    margin-top: 10px;
+  }
+  
+  .confirmation-back-to-res {
+    position: relative;
+    bottom: 0;
+    width: 230px;
+    border-style: solid;
+    border: none;
+    border-width: thin;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: all 0.3s;
+    text-decoration: none;
+    text-align: left;
+  }
+  
+  .iconnn {
+    width: 100%;
+    height: 80%;
+  }
+  
+  .question-alert {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  
+  .confirm-title {
+    font-size: 22px;
+    font-weight: 500;
+    padding-bottom: 10px;
+  }

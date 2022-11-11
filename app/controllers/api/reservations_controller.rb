@@ -26,12 +26,14 @@ class Api::ReservationsController < ApplicationController
 
     def show
         @reservation = Reservation.find(params[:id])
+
+        render :show
     end
 
     def index
         if user_id
             reservations = Reservation.where("user_id = ?", user_id)
-            reservation.includes(:restaurant)
+            # reservation.includes(:restaurant)
         else
             reservations = {}
         end
